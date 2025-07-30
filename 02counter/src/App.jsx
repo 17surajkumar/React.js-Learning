@@ -13,6 +13,7 @@ function App() {
     }
     counter++;
     setCounter(counter);
+    
   };
 
   const removeValue = () => {
