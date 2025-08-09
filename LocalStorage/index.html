@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="saveName()">Save Name</button>
+    <button onclick="location.reload()">Reload Page</button>
+
+    <script>
+      function saveName() {
+        localStorage.setItem("name", "Suraj");
+        alert("Name saved!");
+      }
+
+      window.onload = function () {
+        const name = localStorage.getItem("name");
+        if (name) {
+          alert("Welcome back, " + name);
+        } else {
+          alert("No name saved.");
+        }
+      };
+    </script>
+  </body>
+</html>
