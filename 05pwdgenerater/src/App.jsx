@@ -17,11 +17,11 @@ function App() {
     if (charAllowed) str += "!@#$%&";
 
     for (let i = 1; i <= length; i++) {
-      let char = Math.floor(Math.random() * str.length + 1);
+      let char = Math.floor(Math.random() * str.length);
       pass += str.charAt(char);
     }
 
-    setPassword(pass);
+    setPassword(pass); //It is used to set the created password using useState Hooks
   }, [length, numbersAllowed, charAllowed, setPassword]);
 
   const copyPasswordToClipboard = useCallback(() => {
@@ -67,9 +67,7 @@ function App() {
               max={100}
               value={length}
               className="cursor-pointer"
-              onChange={(event) => {
-                setLength(event.target.value);
-              }}
+              onChange={(e) => setLength(Number(e.target.value))}
             />
             <label htmlFor="">Length: {length}</label>
           </div>
