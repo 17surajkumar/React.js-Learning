@@ -1,0 +1,27 @@
+npm create vite@latest my-project
+cd my-project
+
+npm install
+
+
+npm install tailwindcss @tailwindcss/vite
+
+
+in vite.config.js
+import { defineConfig } from 'vite'
+import tailwindcss from '@tailwindcss/vite'
+export default defineConfig({
+  plugins: [
+    tailwindcss(),
+  ],
+})
+
+
+@import "tailwindcss";
+
+npm run dev
+
+
+React router:
+
+npm install react-router-dom@latest
