@@ -25,3 +25,16 @@ npm run dev
 React router:
 
 npm install react-router-dom@latest
+
+
+-------------------------------------
+
+To add the dark mode in the react + vite app
+
+add 
+@custom-variant dark (&:where(.dark, .dark *));
+to index.css file
+
+
+
+
