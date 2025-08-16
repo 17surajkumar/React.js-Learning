@@ -41,6 +41,8 @@ export default App;
 
 3. Consume the Context: Any child component can then use the useContext() hook to directly access that value, no matter how deeply nested it is.
 
+4. Going
+
 */
 
 /*
